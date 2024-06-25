@@ -11,14 +11,10 @@ public function index()
 {
     $products = Product::all(); //je récupper toutes les in
     // dd($products);
-    return view('accueil.guest', ['products' => $products]);
+    return view('accueil', ['products' => $products]);
 }
 
-public function show($id)
-{
-    $product = Product::find($id);
-    return view('products.show', ['product' => $product]);
-}
+
 
 public function create()
 {

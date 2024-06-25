@@ -10,7 +10,9 @@ class ArticleController extends Controller
     public function index()
 {
     $products = Product::all();
-    // dd($products);
+    //dd($products);
     return view('accueil_guest', ['products' => $products]);
 }
+
+
 }
