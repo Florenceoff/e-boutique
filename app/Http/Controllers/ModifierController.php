@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class ModifierController extends Controller
 {
-    public function show()
+    public function show($id)
     {
-        $product = Product::find();
+        $product = Product::find($id);
        return view('modifier', ['product' => $product]);
 
     }

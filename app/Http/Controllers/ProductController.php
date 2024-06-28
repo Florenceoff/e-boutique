@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
 public function index()
 {
-    $products = Product::all(); //je récupper toutes les in
+    $products = Product::all(); //je récupper toutes les 
     // dd($products);
     return view('accueil', ['products' => $products]);
 }

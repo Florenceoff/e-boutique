@@ -1,13 +1,13 @@
 @include('accueil')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Liste des produits') }}
+            {{ __('Modifier le produit') }}
         </h2>
     </x-slot>
 
     <h1>Modifier le produit {{ $product->name }}</h1>
 
-    <form action="{{ route('products.update', $product->id) }}" method="POST">
+    <form action="{{ route('products.update', $product->$id) }}" method="POST">
             @method('PUT')
             <label for="name">Nom du produit:</label>
             <input type="text" name="name" id="name" value="{{ $product->name }}">
